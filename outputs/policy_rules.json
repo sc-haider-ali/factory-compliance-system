@@ -1,0 +1,40 @@
+{
+  "classes": [
+    {
+      "id": 0,
+      "unsafe_name": "Safe Walkway Violation",
+      "safe_name": "Safe Walkway",
+      "observable_indicator": "Person outside green floor markings",
+      "policy_section": "Section 3.3.2",
+      "callout_level": "WARNING",
+      "domain": "Pedestrian Movement"
+    },
+    {
+      "id": 1,
+      "unsafe_name": "Unauthorized Intervention",
+      "safe_name": "Authorized Intervention",
+      "observable_indicator": "Person interacting with equipment without green vest or without required safety equipment",
+      "policy_section": "Section 4.3.2",
+      "callout_level": "CRITICAL",
+      "domain": "Equipment Interaction"
+    },
+    {
+      "id": 2,
+      "unsafe_name": "Opened Panel Cover",
+      "safe_name": "Closed Panel Cover",
+      "observable_indicator": "Panel cover in open position during production operations",
+      "policy_section": "Section 5.2.2",
+      "callout_level": "WARNING",
+      "domain": "Electrical Safety"
+    },
+    {
+      "id": 3,
+      "unsafe_name": "Carrying Overload with Forklift",
+      "safe_name": "Safe Carrying",
+      "observable_indicator": "3 or more blocks on forklift forks",
+      "policy_section": "Section 6.3.2",
+      "callout_level": "CRITICAL",
+      "domain": "Forklift Load"
+    }
+  ]
+}

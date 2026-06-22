@@ -1,0 +1,40 @@
+.env
+
+venv/
+
+*.pth
+*.pt
+*.ckpt
+
+data/
+
+
+# ── PYTHON CACHE FILES ───────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── JUPYTER NOTEBOOK CHECKPOINTS ────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# ── OS-SPECIFIC JUNK FILES ───────────────────────────────────
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS (if collaborators use Macs)
+.DS_Store
+.AppleDouble
+
+# ── IDE / EDITOR FILES ───────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+
+# ── LOGS & TEMP FILES ────────────────────────────────────────
+*.log
+data/temp_*
