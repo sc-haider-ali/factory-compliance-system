@@ -10,8 +10,8 @@ import time
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from src.reports import init_database, get_all_violations, export_to_csv, get_summary_stats, save_violation
-from src.detection import process_video
 from src.severity import enrich_violation
+# Note: detection functions are imported lazily inside the button handler
 
 # ─── PAGE CONFIG ───────────────────────────────────────────────────
 st.set_page_config(

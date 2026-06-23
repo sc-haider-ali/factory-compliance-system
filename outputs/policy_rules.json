@@ -15,7 +15,7 @@
       "safe_name": "Authorized Intervention",
       "observable_indicator": "Person interacting with equipment without green vest or without required safety equipment",
       "policy_section": "Section 4.3.2",
-      "callout_level": "CRITICAL",
+      "callout_level": "CRITICAL SAFETY NOTICE",
       "domain": "Equipment Interaction"
     },
     {
@@ -33,7 +33,7 @@
       "safe_name": "Safe Carrying",
       "observable_indicator": "3 or more blocks on forklift forks",
       "policy_section": "Section 6.3.2",
-      "callout_level": "CRITICAL",
+      "callout_level": "CRITICAL SAFETY NOTICE",
       "domain": "Forklift Load"
     }
   ]
