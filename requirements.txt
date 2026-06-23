@@ -1,0 +1,27 @@
+# ── Core ML / Vision ──────────────────────────────────────────
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python>=4.8.0
+
+# ── PDF Parsing ───────────────────────────────────────────────
+PyMuPDF>=1.23.0          # imported as fitz
+
+# ── Google Gemini API ─────────────────────────────────────────
+google-generativeai>=0.7.0
+
+# ── Dashboard ─────────────────────────────────────────────────
+streamlit>=1.35.0
+pandas>=2.0.0
+
+# ── Utilities ─────────────────────────────────────────────────
+python-dotenv>=1.0.0     # loads .env for GEMINI_API_KEY
+numpy>=1.24.0            # used in detection.py
+
+# ── Standard Library (no install needed, listed for reference) ─
+# sqlite3   — built-in (reports.py)
+# uuid      — built-in (reports.py)
+# json      — built-in
+# csv       — built-in
+# os / sys  — built-in
+# pathlib   — built-in
+# collections — built-in (detection.py Counter)

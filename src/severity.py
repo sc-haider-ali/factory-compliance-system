@@ -62,6 +62,12 @@ def build_severity_map(rules):
 _rules = load_rules()
 SEVERITY_MAP = build_severity_map(_rules)
 
+def reload_severity_map():
+    """Reload the rules from outputs/policy_rules.json and update the mapping dynamically."""
+    global _rules, SEVERITY_MAP
+    _rules = load_rules()
+    SEVERITY_MAP = build_severity_map(_rules)
+
 # Context-based escalation: if panel is open AND someone is nearby → escalate LOW to MEDIUM
 CONTEXT_ESCALATION = {
     ("Opened Panel Cover", "person_nearby"): "MEDIUM",

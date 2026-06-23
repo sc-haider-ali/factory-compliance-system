@@ -57,8 +57,16 @@ def save_violation(violation):
     conn.close()
     return event_id
 
-def get_all_violations(severity_filter=None, behavior_filter=None):
-    """Fetch violations from DB with optional filters."""
+def get_all_violations(severity_filter=None, behavior_filter=None,
+                       date_from=None, date_to=None):
+    """Fetch violations from DB with optional filters.
+    
+    Args:
+        severity_filter: Filter by severity tier (CRITICAL/HIGH/MEDIUM/LOW)
+        behavior_filter: Filter by behavior class name
+        date_from: ISO date string for start of date range (inclusive)
+        date_to: ISO date string for end of date range (inclusive)
+    """
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
 
@@ -72,6 +80,15 @@ def get_all_violations(severity_filter=None, behavior_filter=None):
     if behavior_filter and behavior_filter != "All":
         query += " AND behavior_class = ?"
         params.append(behavior_filter)
+
+    if date_from:
+        query += " AND timestamp >= ?"
+        params.append(str(date_from))
+
+    if date_to:
+        query += " AND timestamp < ?"
+        # Add one day to make 'to' date inclusive
+        params.append(str(date_to) + "T23:59:59")
 
     query += " ORDER BY timestamp DESC"
 

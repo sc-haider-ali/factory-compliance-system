@@ -6,7 +6,10 @@ venv/
 *.pt
 *.ckpt
 
-data/
+data/train/
+data/test/
+data/frames/
+data/temp_*
 
 
 # ── PYTHON CACHE FILES ───────────────────────────────────────
@@ -37,4 +40,4 @@ desktop.ini
 
 # ── LOGS & TEMP FILES ────────────────────────────────────────
 *.log
-data/temp_*
+
