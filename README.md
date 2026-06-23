@@ -1,8 +1,11 @@
 # 🏭 Factory Compliance & Alert Escalation System
 
+**🎥 [Watch the System Demo on YouTube](https://youtu.be/De_kI51mcds)**
+
 ![Dashboard Interface](Interface-1.png)
 
 *The system takes a factory safety policy document and raw video clips as input, uses AI to detect and categorize unsafe behaviors based on the policy, and stores all violations in a centralized database.*
+
 ## 🔄 Module Sequential Pipeline
 
 ```
@@ -50,6 +53,9 @@ We use a **Fine-Tuned ResNet-50 Model** combined with **Google Gemini**.
 ## 🛠️ Setup & Running
 
 **1. Setup Environment**
+> [!IMPORTANT]
+> The AI model weights (`factory_model.pth`) are tracked using Git LFS. You must have Git Large File Storage installed (`git lfs install`) prior to cloning the repository to successfully download the model.
+
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
