@@ -1,7 +1,8 @@
 # 🏭 Factory Compliance & Alert Escalation System
 
-![alt text](Interface-1.png)
+![Dashboard Interface](Interface-1.png)
 
+*The system takes a factory safety policy document and raw video clips as input, uses AI to detect and categorize unsafe behaviors based on the policy, and stores all violations in a centralized database.*
 ## 🔄 Module Sequential Pipeline
 
 ```
