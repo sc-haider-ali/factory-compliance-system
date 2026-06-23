@@ -1,6 +1,6 @@
 # 🏭 Factory Compliance & Alert Escalation System
 
-Interface.png
+![alt text](Interface-1.png)
 
 ## 🔄 Module Sequential Pipeline
 
