@@ -40,4 +40,5 @@ desktop.ini
 
 # ── LOGS & TEMP FILES ────────────────────────────────────────
 *.log
-
+violations_export.csv
+violations.db
