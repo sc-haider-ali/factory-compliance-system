@@ -8,7 +8,7 @@ def trigger_escalation(violation):
     behavior = violation.get("behavior_class", "Unknown")
     zone = violation.get("zone", "Unknown Zone")
 
-    if severity in ["HIGH", "CRITICAL"]:
+    if severity == "CRITICAL":
         # Simulate sending a real-time alert (e.g., SMS, Email, Slack)
         print(f"\n[🚨 REAL-TIME ALERT TRIGGERED] {severity} Safety Violation!")
         print(f"   -> Behavior: {behavior}")

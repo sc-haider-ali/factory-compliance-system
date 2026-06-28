@@ -3,10 +3,11 @@ import json
 # ── LOAD SEVERITY MAP DYNAMICALLY FROM POLICY JSON ────────────
 # Maps policy callout_level values to our internal severity tiers.
 # This is the key that links the PDF policy to this module.
+# Change this layout in severity.py:
 CALLOUT_TO_SEVERITY = {
-    "CRITICAL": "CRITICAL",
-    "WARNING":  "HIGH",
-    "LOW":      "LOW",
+    "CRITICAL SAFETY NOTICE": "CRITICAL",  # Updated to match your JSON exactly
+    "WARNING":                "HIGH",
+    "LOW":                    "LOW",
 }
 
 def load_rules(policy_path="outputs/policy_rules.json"):
@@ -98,7 +99,7 @@ def assign_severity(behavior_class, context=None):
 
 def get_escalation_action(severity):
     """Determine what action to take based on severity tier."""
-    if severity in ["HIGH", "CRITICAL"]:
+    if severity == "CRITICAL":
         return "Real-time alert triggered + DB log"
     else:
         return "Logged to DB"
@@ -118,7 +119,7 @@ def enrich_violation(violation, context=None):
         **violation,
         "severity": severity,
         "escalation_action": action,
-        "needs_alert": severity in ["HIGH", "CRITICAL"]
+        "needs_alert": severity == "CRITICAL"
     }
 
 
